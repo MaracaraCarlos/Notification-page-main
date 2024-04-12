@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --Red: #f65351;
+  --Blue: #0a317b;
+  --White: #ffffff;
+  --Very-light-grayish-blue: #f7fafd;
+  --Light-grayish-blue-1: #e5effa;
+  --Light-grayish-blue-2: #dde7ee;
+  --Grayish-blue: #939dae;
+  --Dark-grayish-blue: #5e6778;
+  --Very-dark-blue: #1c202b;
+}
+
+/* Reset */
+*, 
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Main Styles */
+body {
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  background-color: var(--Light-grayish-blue-1);
+}
+
+.container {
+  width: 800px;
+  margin-top: 50px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--White);
+  border-radius: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notifications {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.notifications h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.notifications .numero {
+  padding-top: 1px;
+  height: 24px;
+  font-weight: 700;
+  padding-inline: 12px;
+  border-radius: 5px;
+  background-color: var(--Blue);
+  color: var(--White);
+}
+
+.mark_all {
+  color: var(--Dark-grayish-blue);
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+.mark_all:hover {
+  color: var(--Blue);
+}
+
+.cards {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: var(--Very-light-grayish-blue);
+}
+
+.cards.read {
+  background-color: transparent;
+}
+
+.cards.read > .info > .content > .red > ion-icon,
+.cards.read > .avatar_kimberly > .info > .content > .red > ion-icon {
+  display: none;
+}
+
+.kimberly {
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 40px; 
+  height: 40px;
+}
+
+.avatar img {
+  width: 40px;
+}
+
+.image img {
+  width: 100%;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+.image img:hover {
+  border-radius: 7px;
+  border: 1px solid var(--Dark-grayish-blue);
+}
+
+.content {
+  display: flex;
+  gap: 6px;
+}
+
+.content p {
+  color: var(--Dark-grayish-blue);
+}
+
+.name {
+  font-weight: 800;
+  color: var(--Very-dark-blue);
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+.name:hover {
+  color: var(--Blue);
+}
+
+.evento {
+  font-weight: 800;
+  color: var(--Dark-grayish-blue);
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+.evento:hover {
+  color: var(--Blue);
+}
+
+.club {
+  color: var(--Blue);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.since {
+  color: var(--Grayish-blue);
+}
+
+.avatar_kimberly {
+  display: flex;
+  gap: 12px;
+}
+
+.image {
+  width: 55px;
+  height: 55px;
+}
+
+.message {
+  margin: 10px 10px 10px 0;
+  padding: 15px;
+  color: var(--Dark-grayish-blue);
+  border: 1px solid var(--Grayish-blue);
+  border-radius: 3px;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+.message:hover {
+  background-color: var(--Light-grayish-blue-1);
+  border: none;
+}
+
+.red {
+  width: 12px;
+  height: 12px;
+}
+
+ion-icon {
+  color: var(--Red);
+  font-size: 11px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 810px) {
+  .container {
+    min-width: 375px;
+    margin-top: 0;
+    padding: 30px 20px;
+    border-radius: 0;
+  }
+}
